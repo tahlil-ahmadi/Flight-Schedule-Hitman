@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Acceptance.Tests", "FlightSchedule.Acceptance.Tests\FlightSchedule.Acceptance.Tests.csproj", "{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Domain.Tests.Unit", "FlightSchedule.Domain.Tests.Unit\FlightSchedule.Domain.Tests.Unit.csproj", "{153BF747-10E9-41A2-8E1E-D7958173D3E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{B42EB8F3-5C20-425A-B146-EC104090AAE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Domain", "FlightSchedule.Domain\FlightSchedule.Domain.csproj", "{50B13083-A28F-4105-A740-30B2456AF287}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153BF747-10E9-41A2-8E1E-D7958173D3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153BF747-10E9-41A2-8E1E-D7958173D3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153BF747-10E9-41A2-8E1E-D7958173D3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153BF747-10E9-41A2-8E1E-D7958173D3E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B13083-A28F-4105-A740-30B2456AF287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B13083-A28F-4105-A740-30B2456AF287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B13083-A28F-4105-A740-30B2456AF287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B13083-A28F-4105-A740-30B2456AF287}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{153BF747-10E9-41A2-8E1E-D7958173D3E8} = {B42EB8F3-5C20-425A-B146-EC104090AAE4}
+		{50B13083-A28F-4105-A740-30B2456AF287} = {B42EB8F3-5C20-425A-B146-EC104090AAE4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9978B152-D189-43D5-933B-3E7D047A0ED2}
+	EndGlobalSection
+EndGlobal
