@@ -66,6 +66,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\FlightCalculationTests.cs" />
     <Compile Include="TestUtils\ClockHelper.cs" />
     <Compile Include="TestUtils\FlightTestBuilder.cs" />
     <Compile Include="Model\FlightTests.cs" />

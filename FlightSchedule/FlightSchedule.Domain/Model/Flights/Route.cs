@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FlightSchedule.Domain.Tests.Unit.Model;
-
-namespace FlightSchedule.Domain.Model
+﻿namespace FlightSchedule.Domain.Model.Flights
 {
     public class Route
     {

@@ -1,7 +1,6 @@
 ﻿using System;
-using FlightSchedule.Domain.Tests.Unit.Model;
 
-namespace FlightSchedule.Domain.Model
+namespace FlightSchedule.Domain.Model.Flights
 {
     public class Flight
     {

@@ -1,5 +1,6 @@
 ﻿using System;
 using FlightSchedule.Domain.Model;
+using FlightSchedule.Domain.Model.Flights;
 using FlightSchedule.Domain.Tests.Unit.TestUtils;
 using FluentAssertions;
 using Xunit;
@@ -9,18 +10,22 @@ namespace FlightSchedule.Domain.Tests.Unit.Model
 {
     public class FlightTests
     {
+        private readonly FlightTestBuilder _flightBuilder;
+        public FlightTests()
+        {
+            this._flightBuilder = new FlightTestBuilder();
+        }
+
         [Fact]
         public void Constructor_should_create_flight_properly()
         {
-            var builder = new FlightTestBuilder();
+            var flight = _flightBuilder.Build();
 
-            var flight = builder.Build();
-
-            flight.Route.Origin.Should().Be(builder.Origin);
-            flight.Route.Destination.Should().Be(builder.Destination);
-            flight.DepartDate.Should().Be(builder.DepartDate);
-            flight.ArriveDate.Should().Be(builder.ArriveDate);
-            flight.FlightNumber.Should().Be(builder.FlightNumber);
+            flight.Route.Origin.Should().Be(_flightBuilder.Origin);
+            flight.Route.Destination.Should().Be(_flightBuilder.Destination);
+            flight.DepartDate.Should().Be(_flightBuilder.DepartDate);
+            flight.ArriveDate.Should().Be(_flightBuilder.ArriveDate);
+            flight.FlightNumber.Should().Be(_flightBuilder.FlightNumber);
         }
 
         [Theory]
@@ -30,7 +35,7 @@ namespace FlightSchedule.Domain.Tests.Unit.Model
         [InlineData("ika", "ika")]
         public void Constructor_should_throw_when_origin_and_destination_are_same(string origin, string destination)
         {
-            var builder = new FlightTestBuilder()
+            var builder = _flightBuilder
                                 .WithOrigin(origin)
                                 .WithDestination(destination);
 
@@ -45,7 +50,7 @@ namespace FlightSchedule.Domain.Tests.Unit.Model
             var departDate = ClockHelper.SomeDate();
             var arriveDate = ClockHelper.SomeDateBefore(departDate);
 
-            var builder = new FlightTestBuilder()
+            var builder = _flightBuilder
                 .WithDepartDate(departDate)
                 .WithArriveDate(arriveDate);
 

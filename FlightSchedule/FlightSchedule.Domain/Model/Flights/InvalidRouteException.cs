@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FlightSchedule.Domain.Tests.Unit.Model
+namespace FlightSchedule.Domain.Model.Flights
 {
     public class InvalidRouteException : Exception
     {

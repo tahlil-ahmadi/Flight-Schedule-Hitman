@@ -1,5 +1,6 @@
 ﻿using System;
 using FlightSchedule.Domain.Model;
+using FlightSchedule.Domain.Model.Flights;
 
 namespace FlightSchedule.Domain.Tests.Unit.TestUtils
 {
@@ -40,6 +41,12 @@ namespace FlightSchedule.Domain.Tests.Unit.TestUtils
             this.ArriveDate = date;
             return this;
         }
+        public FlightTestBuilder WithFlightNumber(string flightNo)
+        {
+            this.FlightNumber = flightNo;
+            return this;
+        }
+
         public Flight Build()
         {
             var route = new Route(this.Origin, this.Destination);

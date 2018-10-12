@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50B13083-A28F-4105-A740-30B2456AF287}</ProjectGuid>
+    <ProjectGuid>{ECE1A638-B959-4648-8405-33BF1339E354}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FlightSchedule.Domain</RootNamespace>
-    <AssemblyName>FlightSchedule.Domain</AssemblyName>
+    <RootNamespace>Framework.Core</RootNamespace>
+    <AssemblyName>Framework.Core</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,19 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Services\FlightCalculation\FlightCalculationService.cs" />
-    <Compile Include="Services\FlightCalculation\FlightCalculationRequest.cs" />
-    <Compile Include="Model\Flights\Route.cs" />
-    <Compile Include="Model\Flights\Flight.cs" />
-    <Compile Include="Model\Flights\InvalidRouteException.cs" />
+    <Compile Include="DateTimeExtentions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\FlightCalculation\WeeklyTimetable.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Framework.Core\Framework.Core.csproj">
-      <Project>{ece1a638-b959-4648-8405-33bf1339e354}</Project>
-      <Name>Framework.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
