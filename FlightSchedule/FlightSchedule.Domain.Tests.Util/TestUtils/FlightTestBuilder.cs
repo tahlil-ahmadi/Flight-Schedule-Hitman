@@ -1,10 +1,9 @@
 ﻿using System;
-using FlightSchedule.Domain.Model;
 using FlightSchedule.Domain.Model.Flights;
 
-namespace FlightSchedule.Domain.Tests.Unit.TestUtils
+namespace FlightSchedule.Domain.Tests.Util.TestUtils
 {
-    internal class FlightTestBuilder
+    public class FlightTestBuilder
     {
         public string Origin { get; private set; }
         public string Destination { get; private set; }

@@ -1,7 +1,7 @@
 ﻿using System;
 using FlightSchedule.Domain.Model;
 using FlightSchedule.Domain.Model.Flights;
-using FlightSchedule.Domain.Tests.Unit.TestUtils;
+using FlightSchedule.Domain.Tests.Util.TestUtils;
 using FluentAssertions;
 using Xunit;
 using Exception = System.Exception;

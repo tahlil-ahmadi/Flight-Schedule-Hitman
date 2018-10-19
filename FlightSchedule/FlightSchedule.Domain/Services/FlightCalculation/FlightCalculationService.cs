@@ -6,7 +6,7 @@ using Framework.Core;
 
 namespace FlightSchedule.Domain.Services.FlightCalculation
 {
-    public class FlightCalculationService
+    public class FlightCalculationService : IFlightCalculationService
     {
         public List<Flight> Calculate(FlightCalculationRequest request)
         {

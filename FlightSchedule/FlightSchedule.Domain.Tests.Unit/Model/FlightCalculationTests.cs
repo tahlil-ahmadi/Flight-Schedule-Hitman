@@ -6,7 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using FlightSchedule.Domain.Model.Flights;
 using FlightSchedule.Domain.Services.FlightCalculation;
-using FlightSchedule.Domain.Tests.Unit.TestUtils;
+using FlightSchedule.Domain.Tests.Util.TestUtils;
+using FlightSchedule.Domain.Tests.Util.TestUtils.FlightCalculationRequest;
 using FluentAssertions;
 using Xunit;
 
@@ -41,8 +42,6 @@ namespace FlightSchedule.Domain.Tests.Unit.Model
                     .WithWeeklyTimeTable(CreateWeeklyTimetable(DayOfWeek.Monday, _nine, _tenThirty))
                     .WithWeeklyTimeTable(CreateWeeklyTimetable(DayOfWeek.Wednesday, _twentyThirty, _twentyTwo))
                     .Build();
-
-
 
             var flightBuilder = new FlightTestBuilder()
                 .WithFlightNumber("WS-20")

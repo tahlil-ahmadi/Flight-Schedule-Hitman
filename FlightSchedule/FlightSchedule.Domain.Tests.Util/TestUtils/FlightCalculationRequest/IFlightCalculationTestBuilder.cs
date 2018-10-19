@@ -1,16 +1,16 @@
-﻿namespace FlightSchedule.Domain.Tests.Unit.TestUtils
+﻿using System;
+using FlightSchedule.Domain.Services.FlightCalculation;
+
+namespace FlightSchedule.Domain.Tests.Util.TestUtils.FlightCalculationRequest
 {
-    using FlightSchedule.Domain.Services.FlightCalculation;
-    using System;
     public interface IFlightCalculationTestBuilder
     {
         IFlightCalculationRequestTestBuilder WithFlightCalculationRequestTestBuilder();
-        //IWeeklyTimeTableTestBuilder WithWeeklyTimeTableTestBuilder();
     }
 
     public interface IBuild
     {
-        FlightCalculationRequest Build();
+        Services.FlightCalculation.FlightCalculationRequest Build();
     }
 
     public interface IFlightCalculationRequestTestBuilder : IBuild
@@ -21,10 +21,5 @@
         IFlightCalculationRequestTestBuilder WithFrom(DateTime from);
         IFlightCalculationRequestTestBuilder WithTo(DateTime to);
         IFlightCalculationRequestTestBuilder WithWeeklyTimeTable(WeeklyTimetable timetables);
-
     }
-
-    //public interface IWeeklyTimeTableTestBuilder : IBuild
-    //{
-    //}
 }

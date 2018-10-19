@@ -1,9 +1,9 @@
-﻿namespace FlightSchedule.Domain.Tests.Unit.TestUtils
-{
-    using System;
-    using System.Collections.Generic;
-    using FlightSchedule.Domain.Services.FlightCalculation;
+﻿using System;
+using System.Collections.Generic;
+using FlightSchedule.Domain.Services.FlightCalculation;
 
+namespace FlightSchedule.Domain.Tests.Util.TestUtils.FlightCalculationRequest
+{
     public class FlightCalculationTestBuilder : IFlightCalculationTestBuilder, IFlightCalculationRequestTestBuilder
     {
         private string _destination;
@@ -70,9 +70,9 @@
             return this;
         }
 
-        public FlightCalculationRequest Build()
+        public Services.FlightCalculation.FlightCalculationRequest Build()
         {
-            return new FlightCalculationRequest()
+            return new Services.FlightCalculation.FlightCalculationRequest()
             {
                 Destination = _destination,
                 FlightNumber = _flightNumber,
