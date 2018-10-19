@@ -68,6 +68,8 @@
   <ItemGroup>
     <Compile Include="Model\FlightCalculationTests.cs" />
     <Compile Include="TestUtils\ClockHelper.cs" />
+    <Compile Include="TestUtils\FlightCalculationRequest\FlightCalculationTestBuilder.cs" />
+    <Compile Include="TestUtils\FlightCalculationRequest\IFlightCalculationTestBuilder.cs" />
     <Compile Include="TestUtils\FlightTestBuilder.cs" />
     <Compile Include="Model\FlightTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
