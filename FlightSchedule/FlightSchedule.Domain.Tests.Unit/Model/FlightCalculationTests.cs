@@ -22,39 +22,27 @@ namespace FlightSchedule.Domain.Tests.Unit.Model
         public FlightCalculationTests()
         {
             this._flightBuilder = new FlightTestBuilder();
-            this._nine = new TimeSpan(9,0,0);
-            this._tenThirty = new TimeSpan(10,30,0);
-            this._twentyThirty = new TimeSpan(20,30,0);
-            this._twentyTwo = new TimeSpan(22,00, 0);
+            this._nine = new TimeSpan(9, 0, 0);
+            this._tenThirty = new TimeSpan(10, 30, 0);
+            this._twentyThirty = new TimeSpan(20, 30, 0);
+            this._twentyTwo = new TimeSpan(22, 00, 0);
         }
 
         [Fact]
         public void Calculate_should_calculate_flights_based_on_days_in_date_period()
         {
-            //TODO: oh my god, refactor this test O_o
-            var request = new FlightCalculationRequest()
-            {
-                Destination = "DXB",
-                Origin = "IKA",
-                FlightNumber = "WS-20",
-                From = new DateTime(2018, 09, 30),
-                To = new DateTime(2018, 10, 15),
-                Timetables = new List<WeeklyTimetable>()
-                {
-                    new WeeklyTimetable()
-                    {
-                        DayOfWeek = DayOfWeek.Monday,
-                        DepartureTime = _nine,
-                        ArrivalTime = _tenThirty,
-                    },
-                    new WeeklyTimetable()
-                    {
-                        DayOfWeek = DayOfWeek.Wednesday,
-                        DepartureTime = _twentyThirty,
-                        ArrivalTime = _twentyTwo,
-                    }
-                }
-            };
+            var request = FlightCalculationTestBuilder.New()
+                .WithFlightCalculationRequestTestBuilder()
+                    .WithDestination("DXB")
+                    .WithOrigin("IKA")
+                    .WithFlightNumber("WS-20")
+                    .WithFrom(CreateDateTime(2018, 09, 30))
+                    .WithTo(CreateDateTime(2018, 10, 15))
+                    .WithWeeklyTimeTable(CreateWeeklyTimetable(DayOfWeek.Monday, _nine, _tenThirty))
+                    .WithWeeklyTimeTable(CreateWeeklyTimetable(DayOfWeek.Wednesday, _twentyThirty, _twentyTwo))
+                    .Build();
+
+
 
             var flightBuilder = new FlightTestBuilder()
                 .WithFlightNumber("WS-20")
@@ -79,8 +67,8 @@ namespace FlightSchedule.Domain.Tests.Unit.Model
         private Flight CreateFlightForMonday(int day)
         {
             return this._flightBuilder
-                .WithDepartDate(new DateTime(2018,10,day, _nine.Hours, _nine.Minutes, 0))
-                .WithArriveDate(new DateTime(2018,10,day, _tenThirty.Hours, _tenThirty.Minutes, 0))
+                .WithDepartDate(new DateTime(2018, 10, day, _nine.Hours, _nine.Minutes, 0))
+                .WithArriveDate(new DateTime(2018, 10, day, _tenThirty.Hours, _tenThirty.Minutes, 0))
                 .Build();
         }
         private Flight CreateFlightForWednesday(int day)
@@ -89,6 +77,20 @@ namespace FlightSchedule.Domain.Tests.Unit.Model
                 .WithDepartDate(new DateTime(2018, 10, day, _twentyThirty.Hours, _twentyThirty.Minutes, 0))
                 .WithArriveDate(new DateTime(2018, 10, day, _twentyTwo.Hours, _twentyTwo.Minutes, 0))
                 .Build();
+        }
+        private WeeklyTimetable CreateWeeklyTimetable(DayOfWeek dayOfWeek, TimeSpan departureTime, TimeSpan arrivalTime)
+        {
+            return new WeeklyTimetable()
+            {
+                DayOfWeek = dayOfWeek,
+                ArrivalTime = arrivalTime,
+                DepartureTime = departureTime
+            };
+
+        }
+        private DateTime CreateDateTime(int year, int month, int day)
+        {
+            return new DateTime(year, month, day);
         }
     }
 }
