@@ -10,7 +10,6 @@ namespace FlightSchedule.Application.Tests.Unit
         {
             this._flights.Add(flight);
         }
-
         public List<Flight> GetFlights()
         {
             return _flights;
