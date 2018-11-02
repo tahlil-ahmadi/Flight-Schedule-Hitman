@@ -9,5 +9,6 @@ namespace FlightSchedule.Domain.Model.Flights
     public interface IFlightRepository
     {
         void Add(Flight flight);
+        List<Flight> GetByFlightNo(string flightNo);
     }
 }

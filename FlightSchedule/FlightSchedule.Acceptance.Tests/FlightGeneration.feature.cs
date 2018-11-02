@@ -120,44 +120,38 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I generate the flights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                        "FlightDate",
-                        "DepartureTime",
-                        "ArrivalTime",
+                        "DepartDate",
+                        "ArriveDate",
                         "FlightNumber",
                         "Origin",
                         "Destination"});
             table3.AddRow(new string[] {
-                        "2018-10-01",
-                        "09:00",
-                        "10:30",
+                        "2018-10-01 09:00",
+                        "2018-10-01 10:30",
                         "WS-2130",
                         "IKA",
                         "DXB"});
             table3.AddRow(new string[] {
-                        "2018-10-03",
-                        "20:30",
-                        "22:00",
+                        "2018-10-03 20:30",
+                        "2018-10-03 22:00",
                         "WS-2130",
                         "IKA",
                         "DXB"});
             table3.AddRow(new string[] {
-                        "2018-10-08",
-                        "09:00",
-                        "10:30",
+                        "2018-10-08 09:00",
+                        "2018-10-08 10:30",
                         "WS-2130",
                         "IKA",
                         "DXB"});
             table3.AddRow(new string[] {
-                        "2018-10-10",
-                        "20:30",
-                        "22:00",
+                        "2018-10-10 20:30",
+                        "2018-10-10 22:00",
                         "WS-2130",
                         "IKA",
                         "DXB"});
             table3.AddRow(new string[] {
-                        "2018-10-15",
-                        "09:00",
-                        "10:30",
+                        "2018-10-15 09:00",
+                        "2018-10-15 10:30",
                         "WS-2130",
                         "IKA",
                         "DXB"});

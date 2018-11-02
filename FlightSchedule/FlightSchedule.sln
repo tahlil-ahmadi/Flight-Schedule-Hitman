@@ -33,6 +33,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{075615BF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Persistence.EF.Tests.Integration", "FlightSchedule.Persistence.EF.Tests.Integration\FlightSchedule.Persistence.EF.Tests.Integration.csproj", "{CE281337-09DA-4287-9FE6-507B68578D67}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{E821900F-CFD9-494E-8DA1-A6A779D1A05E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Gateways.RestApi", "FlightSchedule.Gateways.RestApi\FlightSchedule.Gateways.RestApi.csproj", "{B52C27EA-E2D0-4CC8-9CB1-F53213A568CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Application.Contracts", "FlightSchedule.Application.Contracts\FlightSchedule.Application.Contracts.csproj", "{2F2A6D5A-3206-41F3-A8BA-B6C465225858}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Config.SimpleInjector", "FlightSchedule.Config.SimpleInjector\FlightSchedule.Config.SimpleInjector.csproj", "{00BA3874-31F5-4048-A130-AB143C083D93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Web.Tools", "Framework.Web.Tools\Framework.Web.Tools.csproj", "{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +85,22 @@ Global
 		{CE281337-09DA-4287-9FE6-507B68578D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE281337-09DA-4287-9FE6-507B68578D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE281337-09DA-4287-9FE6-507B68578D67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B52C27EA-E2D0-4CC8-9CB1-F53213A568CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B52C27EA-E2D0-4CC8-9CB1-F53213A568CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B52C27EA-E2D0-4CC8-9CB1-F53213A568CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B52C27EA-E2D0-4CC8-9CB1-F53213A568CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2A6D5A-3206-41F3-A8BA-B6C465225858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2A6D5A-3206-41F3-A8BA-B6C465225858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2A6D5A-3206-41F3-A8BA-B6C465225858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2A6D5A-3206-41F3-A8BA-B6C465225858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00BA3874-31F5-4048-A130-AB143C083D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00BA3874-31F5-4048-A130-AB143C083D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00BA3874-31F5-4048-A130-AB143C083D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00BA3874-31F5-4048-A130-AB143C083D93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +119,11 @@ Global
 		{A4CF54A4-4293-4946-B764-47A176C66BBD} = {3D328362-041C-48A7-AA78-E062CBEA21DC}
 		{075615BF-E79F-42DB-8F88-2AD3A864E6C2} = {9CEF9199-C0C4-40EA-BB73-CC91EB8B7CCF}
 		{CE281337-09DA-4287-9FE6-507B68578D67} = {075615BF-E79F-42DB-8F88-2AD3A864E6C2}
+		{E821900F-CFD9-494E-8DA1-A6A779D1A05E} = {9CEF9199-C0C4-40EA-BB73-CC91EB8B7CCF}
+		{B52C27EA-E2D0-4CC8-9CB1-F53213A568CC} = {E821900F-CFD9-494E-8DA1-A6A779D1A05E}
+		{2F2A6D5A-3206-41F3-A8BA-B6C465225858} = {81707D32-37B4-4BEF-8FB1-4203B4464FCA}
+		{00BA3874-31F5-4048-A130-AB143C083D93} = {3D328362-041C-48A7-AA78-E062CBEA21DC}
+		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF} = {94640D71-2928-4E24-B6E4-042D60889309}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9978B152-D189-43D5-933B-3E7D047A0ED2}

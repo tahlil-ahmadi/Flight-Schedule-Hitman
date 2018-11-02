@@ -21,6 +21,11 @@ namespace FlightSchedule.Persistence.EF.Repositories
             _context.SaveChanges();
         }
 
+        public List<Flight> GetByFlightNo(string flightNo)
+        {
+            return _context.Flights.Where(a => a.FlightNumber == flightNo).ToList();
+        }
+
         public Flight GetById(long id)
         {
             return _context.Flights.FirstOrDefault(a => a.Id == id);

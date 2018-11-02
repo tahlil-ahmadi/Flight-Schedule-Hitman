@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using FlightSchedule.Domain.Model.Flights;
 
 namespace FlightSchedule.Application.Tests.Unit
@@ -10,6 +11,12 @@ namespace FlightSchedule.Application.Tests.Unit
         {
             this._flights.Add(flight);
         }
+
+        public List<Flight> GetByFlightNo(string flightNo)
+        {
+            return _flights.Where(a => a.FlightNumber == flightNo).ToList();
+        }
+
         public List<Flight> GetFlights()
         {
             return _flights;

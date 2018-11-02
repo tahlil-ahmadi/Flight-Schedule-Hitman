@@ -88,6 +88,10 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FlightSchedule.Application.Contracts\FlightSchedule.Application.Contracts.csproj">
+      <Project>{2f2a6d5a-3206-41f3-a8ba-b6c465225858}</Project>
+      <Name>FlightSchedule.Application.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FlightSchedule.Application\FlightSchedule.Application.csproj">
       <Project>{CD96B5A8-DE64-48DF-A01F-8DA8EE158584}</Project>
       <Name>FlightSchedule.Application</Name>

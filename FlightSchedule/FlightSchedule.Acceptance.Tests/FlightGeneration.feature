@@ -13,9 +13,9 @@ Scenario: Generate flights
 	| Wednesday | 20:30         | 22:00       |
 	When I generate the flights
 	Then The following flights should be generated
-	| FlightDate | DepartureTime | ArrivalTime | FlightNumber | Origin | Destination |
-	| 2018-10-01 | 09:00         | 10:30       | WS-2130      | IKA    | DXB         |
-	| 2018-10-03 | 20:30         | 22:00       | WS-2130      | IKA    | DXB         |
-	| 2018-10-08 | 09:00         | 10:30       | WS-2130      | IKA    | DXB         |
-	| 2018-10-10 | 20:30         | 22:00       | WS-2130      | IKA    | DXB         |
-	| 2018-10-15 | 09:00         | 10:30       | WS-2130      | IKA    | DXB         |
+	| DepartDate       | ArriveDate       | FlightNumber | Origin | Destination |
+	| 2018-10-01 09:00 | 2018-10-01 10:30 | WS-2130      | IKA    | DXB         |
+	| 2018-10-03 20:30 | 2018-10-03 22:00 | WS-2130      | IKA    | DXB         |
+	| 2018-10-08 09:00 | 2018-10-08 10:30 | WS-2130      | IKA    | DXB         |
+	| 2018-10-10 20:30 | 2018-10-10 22:00 | WS-2130      | IKA    | DXB         |
+	| 2018-10-15 09:00 | 2018-10-15 10:30 | WS-2130      | IKA    | DXB         |
