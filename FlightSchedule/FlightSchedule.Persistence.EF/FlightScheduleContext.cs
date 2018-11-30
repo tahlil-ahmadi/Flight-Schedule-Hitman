@@ -14,7 +14,7 @@ namespace FlightSchedule.Persistence.EF
         public DbSet<Flight> Flights { get; set; }
         public FlightScheduleContext(): base("DBConnection")
         {
-
+            Database.SetInitializer<FlightScheduleContext>(null);
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

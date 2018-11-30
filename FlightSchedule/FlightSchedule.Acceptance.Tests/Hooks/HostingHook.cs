@@ -26,8 +26,7 @@ namespace FlightSchedule.Acceptance.Tests.Hooks
         [AfterTestRun]
         public static void StopHost()
         {
-            //TODO: this is not stopping the host !
-            host.Stop();
+            host.Stop().Wait();
         }
     }
 }

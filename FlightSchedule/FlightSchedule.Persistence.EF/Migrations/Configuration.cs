@@ -5,7 +5,7 @@ namespace FlightSchedule.Persistence.EF.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<FlightSchedule.Persistence.EF.FlightScheduleContext>
+    public sealed class Configuration : DbMigrationsConfiguration<FlightSchedule.Persistence.EF.FlightScheduleContext>
     {
         public Configuration()
         {
