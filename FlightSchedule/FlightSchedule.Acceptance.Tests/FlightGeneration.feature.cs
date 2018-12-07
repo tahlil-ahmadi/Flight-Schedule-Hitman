@@ -80,10 +80,14 @@ namespace FlightSchedule.Acceptance.Tests
         [Xunit.FactAttribute(DisplayName="Generate flights")]
         [Xunit.TraitAttribute("FeatureTitle", "FlightGeneration")]
         [Xunit.TraitAttribute("Description", "Generate flights")]
+        [Xunit.TraitAttribute("Category", "API")]
+        [Xunit.TraitAttribute("Category", "UI")]
         public virtual void GenerateFlights()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate flights", null, ((string[])(null)));
-#line 6
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate flights", null, new string[] {
+                        "API",
+                        "UI"});
+#line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line hidden
@@ -99,7 +103,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "2018-09-30",
                         "2018-10-15",
                         "WS-2130"});
-#line 7
+#line 8
  testRunner.Given("I reserved a flight from airline with following information", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -114,9 +118,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "Wednesday",
                         "20:30",
                         "22:00"});
-#line 10
+#line 11
  testRunner.And("The flight has the following weekly timetable", ((string)(null)), table2, "And ");
-#line 14
+#line 15
  testRunner.When("I generate the flights", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -155,7 +159,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "WS-2130",
                         "IKA",
                         "DXB"});
-#line 15
+#line 16
  testRunner.Then("The following flights should be generated", ((string)(null)), table3, "Then ");
 #line hidden
             this.ScenarioCleanup();

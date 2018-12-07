@@ -8,9 +8,9 @@ using Framework.Web.Tools.Http;
 
 namespace FlightSchedule.Acceptance.Tests.Tasks
 {
-    public static class FlightGenerationTask
+    public class FlightGenerationApiTask : IFlightGenerationTask
     {
-        public static void Perform(FlightCalculationRequestDto dto)
+        public void Perform(FlightCalculationRequestDto dto)
         {
             HttpRequestBuilder.CreateNew()
                 .WithUrl("http://localhost:21000/api/flights")

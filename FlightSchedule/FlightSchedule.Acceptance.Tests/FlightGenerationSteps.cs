@@ -19,6 +19,12 @@ namespace FlightSchedule.Acceptance.Tests
     [Binding]
     public class FlightGenerationSteps
     {
+        private readonly IFlightGenerationTask _task;
+        public FlightGenerationSteps(IFlightGenerationTask task)
+        {
+            _task = task;
+        }
+
         //TODO: refactor this class
         private FlightCalculationRequestDto dto;
 
@@ -38,7 +44,7 @@ namespace FlightSchedule.Acceptance.Tests
         [When(@"I generate the flights")]
         public void WhenIGenerateTheFlights()
         {
-            FlightGenerationTask.Perform(dto);
+            _task.Perform(dto);
         }
         
         [Then(@"The following flights should be generated")]
