@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Web.Tools", "Fram
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{2559617D-DF70-4F63-92ED-19CEA8630F1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.AcceptanceTests.Api", "..\FlightSchedule.AcceptanceTests.Api\FlightSchedule.AcceptanceTests.Api.csproj", "{317831D3-84DE-4062-8045-B6C47BC87A11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.AcceptanceTests.Api", "FlightSchedule.AcceptanceTests.Api\FlightSchedule.AcceptanceTests.Api.csproj", "{317831D3-84DE-4062-8045-B6C47BC87A11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.AcceptanceTests.UI", "FlightSchedule.AcceptanceTests.UI\FlightSchedule.AcceptanceTests.UI.csproj", "{A50CFFEE-E4E9-4336-BACA-8BB793567764}"
 EndProject

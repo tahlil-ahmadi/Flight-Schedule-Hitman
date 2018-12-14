@@ -6,12 +6,12 @@ namespace FlightSchedule.AcceptanceTests.Api
 {
     public class FlightGenerationApiTask : IFlightGenerationTask
     {
-        public void Perform(FlightCalculationRequestModel dto)
+        public void Perform(FlightCalculationRequestModel model)
         {
             HttpRequestBuilder.CreateNew()
                 .WithUrl("http://localhost:21000/api/flights")
                 .WithPostVerb()
-                .WithContentAsJson(dto)
+                .WithContentAsJson(model)
                 .DispatchAsync()
                 .Wait();
         }

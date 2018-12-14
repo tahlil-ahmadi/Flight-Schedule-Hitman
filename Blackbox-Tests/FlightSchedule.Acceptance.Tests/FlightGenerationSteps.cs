@@ -3,6 +3,7 @@ using System.Linq;
 using FlightSchedule.AcceptanceTests.Shared.Models;
 using FlightSchedule.AcceptanceTests.Shared.Questions;
 using FlightSchedule.AcceptanceTests.Shared.Tasks;
+using FlightSchedule.Specs.Tools;
 using FluentAssertions;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
@@ -12,15 +13,14 @@ namespace FlightSchedule.Specs
     [Binding]
     public class FlightGenerationSteps
     {
-        private readonly IFlightGenerationTask _task;
-        private readonly IFlightQuestion _question;
+        private readonly TaskResolver _taskResolver;
+        private readonly QuestionResolver _questionResolver;
         private FlightCalculationRequestModel _model;
-
-        public FlightGenerationSteps(IFlightGenerationTask task,
-                                     IFlightQuestion question)
+        public FlightGenerationSteps(TaskResolver taskResolver, 
+                                        QuestionResolver questionResolver)
         {
-            _task = task;
-            _question = question;
+            _taskResolver = taskResolver;
+            _questionResolver = questionResolver;
         }
 
         [Given(@"I reserved a flight from airline with following information")]
@@ -39,14 +39,14 @@ namespace FlightSchedule.Specs
         [When(@"I generate the flights")]
         public void WhenIGenerateTheFlights()
         {
-            _task.Perform(_model);
+            _taskResolver.ResolveTask<IFlightGenerationTask>().Perform(this._model);
         }
         
         [Then(@"The following flights should be generated")]
         public void ThenTheFollowingFlightsShouldBeGenerated(Table table)
         {
             var expectedFlights = table.CreateSet<FlightModel>().OrderBy(a=>a.ArriveDate).ToList();
-            var actualFlights = _question.Ask(_model.FlightNumber);
+            var actualFlights = _questionResolver.ResolveQuestion<IFlightQuestion>().Ask(_model.FlightNumber);
 
             actualFlights.Should().BeEquivalentTo(expectedFlights, options=>options.Excluding(a=>a.Id).Excluding(a=>a.FlightNumber));
         }

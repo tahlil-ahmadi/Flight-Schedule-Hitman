@@ -80,12 +80,15 @@
       <DependentUpon>FlightGeneration.feature</DependentUpon>
     </Compile>
     <Compile Include="FlightGenerationSteps.cs" />
+    <Compile Include="Hooks\Class1.cs" />
     <Compile Include="Hooks\HostingHook.cs" />
     <Compile Include="Hosting\IISExpressConstants.cs" />
     <Compile Include="Hosting\IISExpressHost.cs" />
     <Compile Include="Hosting\IISExpressHostFactory.cs" />
     <Compile Include="Hosting\NativeMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\QuestionResolver.cs" />
+    <Compile Include="Tools\TaskResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -96,7 +99,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FlightSchedule.AcceptanceTests.Api\FlightSchedule.AcceptanceTests.Api.csproj">
+    <ProjectReference Include="..\FlightSchedule.AcceptanceTests.Api\FlightSchedule.AcceptanceTests.Api.csproj">
       <Project>{317831d3-84de-4062-8045-b6c47bc87a11}</Project>
       <Name>FlightSchedule.AcceptanceTests.Api</Name>
     </ProjectReference>

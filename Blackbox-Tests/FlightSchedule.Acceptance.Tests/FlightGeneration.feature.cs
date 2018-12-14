@@ -81,12 +81,10 @@ namespace FlightSchedule.Specs
         [Xunit.TraitAttribute("FeatureTitle", "FlightGeneration")]
         [Xunit.TraitAttribute("Description", "Generate flights")]
         [Xunit.TraitAttribute("Category", "API")]
-        [Xunit.TraitAttribute("Category", "UI")]
         public virtual void GenerateFlights()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate flights", null, new string[] {
-                        "API",
-                        "UI"});
+                        "API"});
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

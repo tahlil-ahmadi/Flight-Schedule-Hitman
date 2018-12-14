@@ -2,8 +2,8 @@
 
 namespace FlightSchedule.AcceptanceTests.Shared.Tasks
 {
-    public interface IFlightGenerationTask
+    public interface IFlightGenerationTask : ITask
     {
-        void Perform(FlightCalculationRequestModel dto);
+        void Perform(FlightCalculationRequestModel model);
     }
 }

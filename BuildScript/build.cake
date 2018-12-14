@@ -1,5 +1,6 @@
 #tool "nuget:?package=xunit.runner.console"
 #addin "Cake.EntityFramework"
+#addin Cake.XdtTransform
 
 var configuration = Argument("Configuration","Debug");
 
@@ -55,21 +56,46 @@ Task("Run-Integration-Tests")
         XUnit2(testAssemblies);
 });
 
-Task("Run-Acceptance-Tests")
+Task("Run-Acceptance-Tests-Api")
     .Does(()=>{
-        var testAssemblies = GetFiles("../FlightSchedule/**/bin/"+ configuration +"/*.Acceptance.Tests.dll");
+        var testAssemblies = GetFiles("../Blackbox-Tests/FlightSchedule.AcceptanceTests.Api/**/bin/"+ configuration +"/*.AcceptanceTests.*.dll");
         XUnit2(testAssemblies);
 });
 
+Task("Run-Acceptance-Tests-UI")
+    .Does(()=>{
+        var testAssemblies = GetFiles("../Blackbox-Tests/FlightSchedule.AcceptanceTests.UI/**/bin/"+ configuration +"/*.AcceptanceTests.*.dll");
+        XUnit2(testAssemblies);
+});
 
+Task("Pack-Framework")
+    .Does(()=>{
+        var nuGetPackSettings   = new NuGetPackSettings {
+            Id                      = "TahlilFramework",
+            Version                 = "0.0.0.1",
+            Description ="Leave me alone",
+            Title                   = "The tile of the package",
+            Authors                 = new[] {"John Doe"},
+            Owners                  = new[] {"Tahlildadeh"},
+            Files                   = new [] {
+                    new NuSpecContent {Source = "../../Blackbox-Tests/Framework.Web.Tools/bin/" + configuration + "/Framework.Web.Tools.dll", Target = "bin"},
+            },
+            // BasePath                = "./src/TestNuget/bin/release",
+            OutputDirectory         = "./output",
+        };
+
+     NuGetPack(nuGetPackSettings);
+});
 Task("Default")
-    .IsDependentOn("Clean")
-    .IsDependentOn("Restore-Nuget")
-    .IsDependentOn("Build")
-    .IsDependentOn("Run-Unit-Tests")
-    .IsDependentOn("Migrate-Database-To-Latest")
-    .IsDependentOn("Run-Integration-Tests")
-    .IsDependentOn("Run-Acceptance-Tests")
+    // .IsDependentOn("Clean")
+    // .IsDependentOn("Restore-Nuget")
+    // .IsDependentOn("Build")
+    // .IsDependentOn("Run-Unit-Tests")
+    // .IsDependentOn("Migrate-Database-To-Latest")
+    // .IsDependentOn("Run-Integration-Tests")
+    // .IsDependentOn("Run-Acceptance-Tests-Api")
+    // .IsDependentOn("Run-Acceptance-Tests-UI")
+    .IsDependentOn("Pack-Framework")
     ;
 
 RunTarget("Default");

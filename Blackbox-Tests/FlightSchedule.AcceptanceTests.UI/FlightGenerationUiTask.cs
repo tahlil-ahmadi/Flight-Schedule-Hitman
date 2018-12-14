@@ -5,7 +5,7 @@ namespace FlightSchedule.AcceptanceTests.UI
 {
     public class FlightGenerationUiTask : IFlightGenerationTask
     {
-        public void Perform(FlightCalculationRequestModel dto)
+        public void Perform(FlightCalculationRequestModel model)
         {
             
         }
