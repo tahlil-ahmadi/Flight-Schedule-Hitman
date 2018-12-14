@@ -3,45 +3,41 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Acceptance.Tests", "FlightSchedule.Acceptance.Tests\FlightSchedule.Acceptance.Tests.csproj", "{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Domain.Tests.Unit", "FlightSchedule.Domain.Tests.Unit\FlightSchedule.Domain.Tests.Unit.csproj", "{153BF747-10E9-41A2-8E1E-D7958173D3E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Domain.Tests.Unit", "test\FlightSchedule.Domain.Tests.Unit\FlightSchedule.Domain.Tests.Unit.csproj", "{153BF747-10E9-41A2-8E1E-D7958173D3E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{B42EB8F3-5C20-425A-B146-EC104090AAE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Domain", "FlightSchedule.Domain\FlightSchedule.Domain.csproj", "{50B13083-A28F-4105-A740-30B2456AF287}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Domain", "src\FlightSchedule.Domain\FlightSchedule.Domain.csproj", "{50B13083-A28F-4105-A740-30B2456AF287}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FlightSchedule", "FlightSchedule", "{9CEF9199-C0C4-40EA-BB73-CC91EB8B7CCF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{94640D71-2928-4E24-B6E4-042D60889309}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Core", "Framework.Core\Framework.Core.csproj", "{ECE1A638-B959-4648-8405-33BF1339E354}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Core", "src\Framework.Core\Framework.Core.csproj", "{ECE1A638-B959-4648-8405-33BF1339E354}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{81707D32-37B4-4BEF-8FB1-4203B4464FCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Application", "FlightSchedule.Application\FlightSchedule.Application.csproj", "{CD96B5A8-DE64-48DF-A01F-8DA8EE158584}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Application", "src\FlightSchedule.Application\FlightSchedule.Application.csproj", "{CD96B5A8-DE64-48DF-A01F-8DA8EE158584}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Application.Tests.Unit", "FlightSchedule.Application.Tests.Unit\FlightSchedule.Application.Tests.Unit.csproj", "{64801B99-D4EE-4FB0-854D-524A268CF79C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Application.Tests.Unit", "test\FlightSchedule.Application.Tests.Unit\FlightSchedule.Application.Tests.Unit.csproj", "{64801B99-D4EE-4FB0-854D-524A268CF79C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Domain.Tests.Util", "FlightSchedule.Domain.Tests.Util\FlightSchedule.Domain.Tests.Util.csproj", "{66AD5F34-533E-4175-BE14-3354F75E3505}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Domain.Tests.Util", "test\FlightSchedule.Domain.Tests.Util\FlightSchedule.Domain.Tests.Util.csproj", "{66AD5F34-533E-4175-BE14-3354F75E3505}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3D328362-041C-48A7-AA78-E062CBEA21DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Persistence.EF", "FlightSchedule.Persistence.EF\FlightSchedule.Persistence.EF.csproj", "{A4CF54A4-4293-4946-B764-47A176C66BBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Persistence.EF", "src\FlightSchedule.Persistence.EF\FlightSchedule.Persistence.EF.csproj", "{A4CF54A4-4293-4946-B764-47A176C66BBD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{075615BF-E79F-42DB-8F88-2AD3A864E6C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Persistence.EF.Tests.Integration", "FlightSchedule.Persistence.EF.Tests.Integration\FlightSchedule.Persistence.EF.Tests.Integration.csproj", "{CE281337-09DA-4287-9FE6-507B68578D67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Persistence.EF.Tests.Integration", "test\FlightSchedule.Persistence.EF.Tests.Integration\FlightSchedule.Persistence.EF.Tests.Integration.csproj", "{CE281337-09DA-4287-9FE6-507B68578D67}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{E821900F-CFD9-494E-8DA1-A6A779D1A05E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Gateways.RestApi", "FlightSchedule.Gateways.RestApi\FlightSchedule.Gateways.RestApi.csproj", "{B52C27EA-E2D0-4CC8-9CB1-F53213A568CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Gateways.RestApi", "src\FlightSchedule.Gateways.RestApi\FlightSchedule.Gateways.RestApi.csproj", "{B52C27EA-E2D0-4CC8-9CB1-F53213A568CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Application.Contracts", "FlightSchedule.Application.Contracts\FlightSchedule.Application.Contracts.csproj", "{2F2A6D5A-3206-41F3-A8BA-B6C465225858}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Application.Contracts", "src\FlightSchedule.Application.Contracts\FlightSchedule.Application.Contracts.csproj", "{2F2A6D5A-3206-41F3-A8BA-B6C465225858}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Config.SimpleInjector", "FlightSchedule.Config.SimpleInjector\FlightSchedule.Config.SimpleInjector.csproj", "{00BA3874-31F5-4048-A130-AB143C083D93}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Web.Tools", "Framework.Web.Tools\Framework.Web.Tools.csproj", "{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Config.SimpleInjector", "src\FlightSchedule.Config.SimpleInjector\FlightSchedule.Config.SimpleInjector.csproj", "{00BA3874-31F5-4048-A130-AB143C083D93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +45,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{153BF747-10E9-41A2-8E1E-D7958173D3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{153BF747-10E9-41A2-8E1E-D7958173D3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{153BF747-10E9-41A2-8E1E-D7958173D3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -97,16 +89,11 @@ Global
 		{00BA3874-31F5-4048-A130-AB143C083D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00BA3874-31F5-4048-A130-AB143C083D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00BA3874-31F5-4048-A130-AB143C083D93}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8} = {075615BF-E79F-42DB-8F88-2AD3A864E6C2}
 		{153BF747-10E9-41A2-8E1E-D7958173D3E8} = {075615BF-E79F-42DB-8F88-2AD3A864E6C2}
 		{B42EB8F3-5C20-425A-B146-EC104090AAE4} = {9CEF9199-C0C4-40EA-BB73-CC91EB8B7CCF}
 		{50B13083-A28F-4105-A740-30B2456AF287} = {B42EB8F3-5C20-425A-B146-EC104090AAE4}
@@ -123,7 +110,6 @@ Global
 		{B52C27EA-E2D0-4CC8-9CB1-F53213A568CC} = {E821900F-CFD9-494E-8DA1-A6A779D1A05E}
 		{2F2A6D5A-3206-41F3-A8BA-B6C465225858} = {81707D32-37B4-4BEF-8FB1-4203B4464FCA}
 		{00BA3874-31F5-4048-A130-AB143C083D93} = {3D328362-041C-48A7-AA78-E062CBEA21DC}
-		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF} = {94640D71-2928-4E24-B6E4-042D60889309}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9978B152-D189-43D5-933B-3E7D047A0ED2}

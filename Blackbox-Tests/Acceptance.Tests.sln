@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.Specs", "FlightSchedule.Acceptance.Tests\FlightSchedule.Specs.csproj", "{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Web.Tools", "Framework.Web.Tools\Framework.Web.Tools.csproj", "{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{2559617D-DF70-4F63-92ED-19CEA8630F1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.AcceptanceTests.Api", "..\FlightSchedule.AcceptanceTests.Api\FlightSchedule.AcceptanceTests.Api.csproj", "{317831D3-84DE-4062-8045-B6C47BC87A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.AcceptanceTests.UI", "FlightSchedule.AcceptanceTests.UI\FlightSchedule.AcceptanceTests.UI.csproj", "{A50CFFEE-E4E9-4336-BACA-8BB793567764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSchedule.AcceptanceTests.Shared", "FlightSchedule.AcceptanceTests.Shared\FlightSchedule.AcceptanceTests.Shared.csproj", "{8C452434-8BD0-4E0E-82E4-CC9D33C9BD35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB03CDE-EF1D-4248-A6E2-66AAC454D3B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{317831D3-84DE-4062-8045-B6C47BC87A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{317831D3-84DE-4062-8045-B6C47BC87A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{317831D3-84DE-4062-8045-B6C47BC87A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{317831D3-84DE-4062-8045-B6C47BC87A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A50CFFEE-E4E9-4336-BACA-8BB793567764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A50CFFEE-E4E9-4336-BACA-8BB793567764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A50CFFEE-E4E9-4336-BACA-8BB793567764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A50CFFEE-E4E9-4336-BACA-8BB793567764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C452434-8BD0-4E0E-82E4-CC9D33C9BD35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C452434-8BD0-4E0E-82E4-CC9D33C9BD35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C452434-8BD0-4E0E-82E4-CC9D33C9BD35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C452434-8BD0-4E0E-82E4-CC9D33C9BD35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D595EE0E-CAE8-4A39-89EF-15C72FF28DEF} = {2559617D-DF70-4F63-92ED-19CEA8630F1B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC1F38D3-92C8-4ECD-9919-8F7232FA21F1}
+	EndGlobalSection
+EndGlobal
