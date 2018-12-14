@@ -80,7 +80,6 @@
       <DependentUpon>FlightGeneration.feature</DependentUpon>
     </Compile>
     <Compile Include="FlightGenerationSteps.cs" />
-    <Compile Include="Hooks\Class1.cs" />
     <Compile Include="Hooks\HostingHook.cs" />
     <Compile Include="Hosting\IISExpressConstants.cs" />
     <Compile Include="Hosting\IISExpressHost.cs" />
