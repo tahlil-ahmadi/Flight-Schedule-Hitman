@@ -8,11 +8,15 @@ import { FlightGenerationService } from '../services/flight-generation.service';
 })
 export class FlightGenerationComponent {
   model: FlightGenerationRequest;
+  isLoading:boolean;
   constructor(private service: FlightGenerationService) {
     this.model = new FlightGenerationRequest();
   }
 
   save() {
-    this.service.save(this.model).subscribe();
+    this.isLoading= true;
+    this.service.save(this.model).subscribe(a=>{
+      this.isLoading = false;
+    });
   }
 }

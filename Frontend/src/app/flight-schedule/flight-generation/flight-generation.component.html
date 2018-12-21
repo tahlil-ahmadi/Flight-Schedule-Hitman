@@ -1,3 +1,7 @@
+<div id="loading" style="color:yellow;background-color: red" *ngIf="isLoading">
+  <span>Loading...........</span>
+</div>
+
 <div style="width:450px">
   <form #flightForm="ngForm" class="form-group">
     <div>
@@ -18,12 +22,12 @@
     </div>
     <div>
       <label>FlightNumber :</label>
-      <input type="text" id="toDateInput" [(ngModel)]="model.flightNumber" name="flightNumber" class="form-control"/>
+      <input type="text" id="flightNumberInput" [(ngModel)]="model.flightNumber" name="flightNumber" class="form-control"/>
     </div>
     <div>
       <label>Timetables :</label>
       <weekly-timetable [(data)]="model.timetables"></weekly-timetable>
     </div>
-    <button (click)="save()" class="btn btn-primary">Save</button>
+    <button (click)="save()" class="btn btn-primary" id="save">Save</button>
   </form>
 </div>

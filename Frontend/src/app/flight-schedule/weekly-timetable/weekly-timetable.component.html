@@ -1,5 +1,5 @@
 <button (click)="add()" id="addTimetableItem" class="btn btn-primary">Add </button>
-<table>
+<table id="timetables">
   <thead>
     <tr>
       <th>Day of Week</th>
@@ -8,20 +8,22 @@
     </tr>
   </thead>
  
-  <tr *ngFor="let item of data">
-    <td>
-      <!-- <input type="text" [(ngModel)]="item.dayOfWeek" class="form-control"/> -->
-      <select class="form-control" [(ngModel)]="item.dayOfWeek">
-        <option *ngFor="let day of days" [value]="day.key">
-            {{ day.value }}
-        </option>
-      </select>
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="item.departureTime" class="form-control"/>
-    </td>
-    <td>
-        <input type="text" [(ngModel)]="item.arrivalTime" class="form-control"/>
-    </td>
-  </tr>
+  <tbody>
+    <tr *ngFor="let item of data">
+      <td>
+        <!-- <input type="text" [(ngModel)]="item.dayOfWeek" class="form-control"/> -->
+        <select class="form-control" [(ngModel)]="item.dayOfWeek">
+          <option *ngFor="let day of days" [value]="day.key">
+              {{ day.value }}
+          </option>
+        </select>
+      </td>
+      <td class="departure">
+          <input type="text" [(ngModel)]="item.departureTime" class="form-control" />
+      </td>
+      <td class="arrival">
+          <input type="text" [(ngModel)]="item.arrivalTime" class="form-control"/>
+      </td>
+    </tr>
+  </tbody>
 </table>

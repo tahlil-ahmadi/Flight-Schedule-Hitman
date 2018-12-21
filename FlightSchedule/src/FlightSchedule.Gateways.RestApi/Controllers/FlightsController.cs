@@ -19,6 +19,7 @@ namespace FlightSchedule.Gateways.RestApi.Controllers
 
         public void Post(FlightCalculationRequestDto dto)
         {
+            Thread.Sleep(3000); //just for loading test
             _service.Generate(dto);
         }
 

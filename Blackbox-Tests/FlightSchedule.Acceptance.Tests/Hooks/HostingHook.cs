@@ -21,7 +21,7 @@ namespace FlightSchedule.Specs.Hooks
         [AfterTestRun]
         public static void StopHost()
         {
-            host.Stop().Wait();
+            host.Stop();
         }
     }
 }

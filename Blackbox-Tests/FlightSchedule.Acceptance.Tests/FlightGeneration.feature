@@ -3,7 +3,7 @@
 	As an flight agency manager
 	I want to be able to generate batch flights
 
-@API
+@API @UI
 Scenario: Generate flights
 	Given I reserved a flight from airline with following information
 	| Origin | Destination | From       | To         | FlightNumber |
