@@ -1,0 +1,28 @@
+<form #flightForm="ngForm">
+  <div>
+    <label>Origin :</label>
+    <input type="text" id="originInput" [(ngModel)]="model.origin" name="origin" />
+  </div>
+  <div>
+    <label>Destination :</label>
+    <input type="text" id="destinationInput" [(ngModel)]="model.destination" name="destination" />
+  </div>
+  <div>
+    <label>From Date :</label>
+    <input type="text" id="fromDateInput" [(ngModel)]="model.from" name="from" />
+  </div>
+  <div>
+    <label>To Date :</label>
+    <input type="text" id="toDateInput" [(ngModel)]="model.to" name="to" />
+  </div>
+  <div>
+    <label>FlightNumber :</label>
+    <input type="text" id="toDateInput" [(ngModel)]="model.flightNumber" name="flightNumber" />
+  </div>
+  <div>
+    <label>Timetables :</label>
+    length : {{model.timetables.length}}
+    <weekly-timetable [(data)]="model.timetables"></weekly-timetable>
+  </div>
+  <button (click)="save()">Save</button>
+</form>

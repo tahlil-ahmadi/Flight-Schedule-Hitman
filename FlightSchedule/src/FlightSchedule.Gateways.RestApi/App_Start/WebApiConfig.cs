@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace FlightSchedule.Gateways.RestApi
 {
@@ -9,9 +10,8 @@ namespace FlightSchedule.Gateways.RestApi
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            config.EnableCors(new EnableCorsAttribute("*","*","*"));
 
-            // Web API routes
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

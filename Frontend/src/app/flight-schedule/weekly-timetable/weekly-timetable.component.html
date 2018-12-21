@@ -1,0 +1,21 @@
+<button (click)="add()" id="addTimetableItem">Add </button>
+<table>
+  <thead>
+    <tr>
+      <th>Day of Week</th>
+      <th>Departure Time</th>
+      <th>Arrival Time</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let item of data">
+    <td>
+      <input type="text" [(ngModel)]="item.dayOfWeek" />
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="item.departureTime" />
+    </td>
+    <td>
+        <input type="text" [(ngModel)]="item.arrivalTime" />
+    </td>
+  </tr>
+</table>
