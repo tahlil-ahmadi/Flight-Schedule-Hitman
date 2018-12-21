@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +27,11 @@ namespace FlightSchedule.Config.SimpleInjector
             container.Register<IFlightCalculationService, FlightCalculationService>(Lifestyle.Singleton);
             container.Register<IFlightGenerationService, FlightGenerationService>(Lifestyle.Scoped);
             container.Register<FlightScheduleContext>(Lifestyle.Scoped);
+
+            container.Register<DbConnection>(() =>
+            {
+               
+            });
         }
     }
 }

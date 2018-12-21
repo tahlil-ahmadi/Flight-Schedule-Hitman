@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,7 @@ namespace FlightSchedule.Persistence.EF
     public class FlightScheduleContext : DbContext
     {
         public DbSet<Flight> Flights { get; set; }
-        public FlightScheduleContext(): base("DBConnection")
+        public FlightScheduleContext(DbConnection connection): base(connection, true)
         {
             Database.SetInitializer<FlightScheduleContext>(null);
         }

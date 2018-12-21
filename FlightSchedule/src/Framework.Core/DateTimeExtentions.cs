@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Framework.Core
 {
-    public static class DateTimeExtentions
+    public static class DateTimeExtensions
     {
         public static IEnumerable<DateTime> EachDay(this DateTime from, DateTime thru)
         {
